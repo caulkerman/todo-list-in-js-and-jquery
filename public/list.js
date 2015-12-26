@@ -4,7 +4,7 @@ var itemArray = [];
 
 
 function addItem(item) {
-	itemArray.unshift(item);
+	itemArray.push(item);
 	console.log(itemArray);
 	$('#new-item').val('');
  	for (var i = 0; i < itemArray.length; i++) {
