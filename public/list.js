@@ -17,17 +17,28 @@ function addItem(item) {
 $(".add-to-do-item-button").on("click", function(event) {
 	event.preventDefault();
 	var item = $("#new-item").val().trim();
+	if ($("#new-item").val().trim() == "") {
+		alert("Enter an Item Name");
+		return;
+	} else {
 	//need to do an if statement so that you can't enter empty fields here.
 	addItem(item);
+	}
 });
 
 
 $( "#new-item" ).keypress(function( event ) {
   if ( event.which == 13 ) {
-     event.preventDefault();
+  	if ($("#new-item").val().trim() == "") {
+  		alert("Enter an Item Name");
+  		return;
+  	} else {
+    event.preventDefault();
 	var item = $("#new-item").val().trim();
 	addItem(item);
+	}
   }
+  $("#new-item").val() === "";
 });
 
 
